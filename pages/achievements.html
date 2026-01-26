@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإنجازات | جمعية الشهيد للأيكيدو</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        /* Specific page styles */
+        .page-header {
+            background-color: var(--color-surface);
+            padding: 120px 0 60px; /* Account for fixed navbar */
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        .achievement-card {
+            background-color: var(--color-surface);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-primary);
+        }
+
+        .achievement-img {
+            height: 200px;
+            width: 100%;
+            background-color: #333; /* Placeholder color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-text-muted);
+        }
+        
+        .achievement-content {
+            padding: 1.5rem;
+        }
+
+        .achievement-date {
+            color: var(--color-primary);
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar (path adjusted) -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <span>أيكيدو</span> الشهيد
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                <li><a href="../index.html#about" class="nav-link">عن الجمعية</a></li>
+                <!-- <li><a href="../index.html#instructors" class="nav-link">المدربين</a></li> -->
+                <li><a href="achievements.html" class="nav-link active">الإنجازات</a></li>
+                <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>إنجازات الجمعية</h1>
+            <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto;">نفتخر بمسيرة طويلة من العطاء والتميز الرياضي</p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="container">
+        <div class="achievement-grid">
+            <!-- Item 1 -->
+            <article class="achievement-card">
+                <div class="achievement-img">صورة</div>
+                <div class="achievement-content">
+                    <span class="achievement-date">2023</span>
+                    <h3>بطولة وطنية</h3>
+                    <p style="color: var(--color-text-muted);">حصول الجمعية على مراتب متقدمة في البطولة الوطنية للأيكيدو.</p>
+                </div>
+            </article>
+
+            <!-- Item 2 -->
+            <article class="achievement-card">
+                <div class="achievement-img">صورة</div>
+                <div class="achievement-content">
+                    <span class="achievement-date">2022</span>
+                    <h3>تدريب دولي</h3>
+                    <p style="color: var(--color-text-muted);">مشاركة مدربينا في سيمينار دولي تحت إشراف خبراء يابانيين.</p>
+                </div>
+            </article>
+
+            <!-- Item 3 -->
+            <article class="achievement-card">
+                <div class="achievement-img">صورة</div>
+                <div class="achievement-content">
+                    <span class="achievement-date">2021</span>
+                    <h3>تخرج دفعة جديدة</h3>
+                    <p style="color: var(--color-text-muted);">ترقية مجموعة من الممارسين إلى الدرجة الأولى (الحزام الأسود).</p>
+                </div>
+            </article>
+            
+             <!-- Item 4 -->
+            <article class="achievement-card">
+                <div class="achievement-img">صورة</div>
+                <div class="achievement-content">
+                    <span class="achievement-date">2020</span>
+                    <h3>نشاط إجتماعي</h3>
+                    <p style="color: var(--color-text-muted);">تنظيم يوم مفتوح للتعريف برياضة الأيكيدو للأطفال.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content" style="display: flex; flex-wrap: wrap; justify-content: space-between; text-align: right;">
+                <div style="flex: 1; min-width: 250px; margin-bottom: 2rem;">
+                    <h4 style="color: var(--color-primary);">جمعية الشهيد</h4>
+                    <p style="color: var(--color-text-muted);">العنوان: مراكش، المغرب</p>
+                    <p style="color: var(--color-text-muted);">الهاتف: 0600000000</p>
+                    <p style="color: var(--color-text-muted);">البريد: info@ass-chahid.com</p>
+                </div>
+                <div style="flex: 1; min-width: 250px;">
+                    <h4>روابط سريعة</h4>
+                    <ul style="color: var(--color-text-muted);">
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li><a href="achievements.html">الإنجازات</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 جمعية الشهيد للفنون القتالية. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
