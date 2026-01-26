@@ -35,25 +35,56 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.classList.toggle("active");
   });
 
-  // Scroll Animations
-  const observerOptions = {
-    threshold: 0.1,
-  };
+    // --- Animation Observer ---
+    const animObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                animObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("fade-in");
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
-      }
+    document.querySelectorAll('section, .instructor-card, .card, .hero-content > *').forEach(el => {
+        if (!el.closest('.hero')) { 
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+        }
+        animObserver.observe(el);
     });
-  }, observerOptions);
 
-  document.querySelectorAll("section, h1, h2, .card").forEach((el) => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(20px)";
-    el.style.transition = "opacity 0.8s ease, transform 0.8s ease";
-    observer.observe(el);
-  });
+    // --- Scroll Spy Observer ---
+    const spySections = document.querySelectorAll('header.hero, section, footer');
+    const navLinksList = document.querySelectorAll('.nav-link');
+
+    const updateNav = (id) => {
+        navLinksList.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+            if (id === 'home' && (href === 'index.html' || href === '#' || href.endsWith('index.html'))) {
+                link.classList.add('active');
+            } else if (id && (href === '#' + id || href.endsWith('#' + id))) {
+                link.classList.add('active');
+            }
+        });
+    };
+
+    const spyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let id = entry.target.getAttribute('id');
+                if (entry.target.tagName === 'HEADER' || entry.target.classList.contains('hero')) {
+                    id = 'home';
+                }
+                if (id) updateNav(id);
+            }
+        });
+    }, { 
+        rootMargin: "-20% 0px -60% 0px",
+        threshold: 0
+    });
+
+    spySections.forEach(section => spyObserver.observe(section));
 });
