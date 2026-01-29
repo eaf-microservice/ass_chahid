@@ -1,172 +1,419 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الإنجازات | جمعية الشهيد للأيكيدو</title>
-    <link rel="stylesheet" href="../static/css/style.css">
-    <style>
-        /* Specific page styles */
-        .page-header {
-            background-color: var(--color-surface);
-            padding: 120px 0 60px; /* Account for fixed navbar */
-            text-align: center;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        
-        .achievement-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 4rem 0;
-        }
-
-        .achievement-card {
-            background-color: var(--color-surface);
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            transition: var(--transition);
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .achievement-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--color-primary);
-        }
-
-        .achievement-img {
-            height: 200px;
-            width: 100%;
-            background-color: #333; /* Placeholder color */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-text-muted);
-        }
-        
-        .achievement-content {
-            padding: 1.5rem;
-        }
-
-        .achievement-date {
-            color: var(--color-primary);
-            font-size: 0.9rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-    </style>
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="keywords"
+      content="أيكيدو الشهيد, جمعية الشهيد للأيكيدو, تعلم الأيكيدو, الأيكيدو في المغرب"
+    />
+    <meta name="author" content="Fouad El Azbi" />
+    <meta
+      name="description"
+      content="الموقع الرسمي لجمعية الشهيد للفنون القتالية - أيكيدو. تعلم الدفاع عن النفس والانضباط الروحي."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="icon" content="static/images/icon.png" />
+    <meta
+      property="og:title"
+      content="جمعية الشهيد للأيكيدو سلا | Association Chahid AIKIDO Sale"
+    />
+    <meta
+      property="og:description"
+      content="الموقع الرسمي لجمعية الشهيد للفنون القتالية - أيكيدو. تعلم الدفاع عن النفس والانضباط الروحي."
+    />
+    <meta property="og:image" content="static/images/icon.png" />
+    <title>الإنجازات | جمعية الشهيد للأيكيدو سلا</title>
+    <link rel="icon" href="../static/images/icon.png" type="icon/png" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/achievements.css" />
+  </head>
+  <body>
     <!-- Navbar (path adjusted) -->
     <nav class="navbar">
-        <div class="container">
-            <a href="../index.html" class="logo">
-                <span>أيكيدو</span> الشهيد
-            </a>
-            <ul class="nav-links">
-                <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
-                <li><a href="../index.html#about" class="nav-link">عن الجمعية</a></li>
-                <!-- <li><a href="../index.html#instructors" class="nav-link">المدربين</a></li> -->
-                <li><a href="achievements.html" class="nav-link active">الإنجازات</a></li>
-                <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
-            </ul>
-        </div>
+      <div class="container">
+        <a href="../index.html" class="logo"> <span>أيكيدو</span> الشهيد </a>
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+          <li><a href="../index.html#about" class="nav-link">عن الجمعية</a></li>
+          <!-- <li><a href="../index.html#instructors" class="nav-link">المدربين</a></li> -->
+          <li>
+            <a href="achievements.html" class="nav-link active">الإنجازات</a>
+          </li>
+          <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Page Header -->
     <header class="page-header">
-        <div class="container">
-            <h1>إنجازات الجمعية</h1>
-            <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto;">نفتخر بمسيرة طويلة من العطاء والتميز الرياضي</p>
-        </div>
+      <div class="container">
+        <h1>إنجازات الجمعية</h1>
+        <p
+          style="
+            color: var(--color-text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+          "
+        >
+          نفتخر بمسيرة طويلة من العطاء والتميز الرياضي
+        </p>
+      </div>
     </header>
 
     <!-- Gallery Section -->
     <section class="container">
-        <div class="achievement-grid">
-            <!-- Item 1 -->
-            <article class="achievement-card">
-                <div class="achievement-img">صورة</div>
-                <div class="achievement-content">
-                    <span class="achievement-date">2023</span>
-                    <h3>بطولة وطنية</h3>
-                    <p style="color: var(--color-text-muted);">حصول الجمعية على مراتب متقدمة في البطولة الوطنية للأيكيدو.</p>
-                </div>
-            </article>
+      <div class="achievement-grid">
+        <!-- Item 1 - 28/07/2023 -->
+        <!-- <article class="achievement-card" data-video-id="YOUR_VIDEO_ID_1">
+          <div class="achievement-img">
+            <img
+              src="../static/images/achievements/2023-07-28.jpg"
+              alt="بطولة المغرب للأيكيدو 2023"
+            />
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-date">28/07/2023</span>
+            <h3>بطولة المغرب للأيكيدو</h3>
+            <p style="color: var(--color-text-muted)">
+              Championnat du Maroc d'AIKIDO
+            </p>
+            <button class="watch-video-btn">▶ مشاهدة الفيديو</button>
+          </div>
+        </article> -->
 
-            <!-- Item 2 -->
-            <article class="achievement-card">
-                <div class="achievement-img">صورة</div>
-                <div class="achievement-content">
-                    <span class="achievement-date">2022</span>
-                    <h3>تدريب دولي</h3>
-                    <p style="color: var(--color-text-muted);">مشاركة مدربينا في سيمينار دولي تحت إشراف خبراء يابانيين.</p>
-                </div>
-            </article>
 
-            <!-- Item 3 -->
-            <article class="achievement-card">
-                <div class="achievement-img">صورة</div>
-                <div class="achievement-content">
-                    <span class="achievement-date">2021</span>
-                    <h3>تخرج دفعة جديدة</h3>
-                    <p style="color: var(--color-text-muted);">ترقية مجموعة من الممارسين إلى الدرجة الأولى (الحزام الأسود).</p>
-                </div>
-            </article>
-            
-             <!-- Item 4 -->
-            <article class="achievement-card">
-                <div class="achievement-img">صورة</div>
-                <div class="achievement-content">
-                    <span class="achievement-date">2020</span>
-                    <h3>نشاط إجتماعي</h3>
-                    <p style="color: var(--color-text-muted);">تنظيم يوم مفتوح للتعريف برياضة الأيكيدو للأطفال.</p>
-                </div>
-            </article>
-        </div>
+        <!-- Item 11 - 03/01/2026 -->
+        <article class="achievement-card" data-video-id="sJgnCnCl0ws">
+          <div class="achievement-img">
+            <img
+              src="../static/images/achievements/03012026.png"
+              alt="عرض رياضي للايكيدو بسوسيو رياضي بسلا الجديدة"
+            />
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-date">03/01/2026</span>
+            <h3>عرض رياضي للايكيدو بسوسيو رياضي بسلا الجديدة</h3>
+            <p style="color: var(--color-text-muted)">
+              عرض للايكيدو بمناسبة إفتتاح سوسيو رياضي بسلا الجديدة
+            </p>
+            <button class="watch-video-btn">▶ مشاهدة الفيديو</button>
+          </div>
+        </article>
+
+        <!-- Item 10 - 06/07/2025 -->
+        <article class="achievement-card" data-video-id="Nk5NluvocBA">
+          <div class="achievement-img">
+            <img
+              src="../static/images/achievements/06072025-biggest.png"
+              alt="بطولة عصبة الأيكيدو سلا"
+            />
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-date">06/07/2025</span>
+            <h3>كأس العرش النسخة الثالثة فئة الكبار</h3>
+            <p style="color: var(--color-text-muted)">
+                الفوز بلقب كأس العرش لسنة تحت لواء الجامعةالملكية المغربية الايكيدو الرتبة الأولى
+            </p>
+            <button class="watch-video-btn">▶ مشاهدة الفيديو</button>
+          </div>
+        </article>
+
+        <!-- Item 10 - 06/07/2025 -->
+        <article class="achievement-card" data-video-id="Hu6_0DwQjU8">
+          <div class="achievement-img">
+            <img
+              src="../static/images/achievements/06072025-moyen.png"
+              alt="بطولة عصبة الأيكيدو سلا"
+            />
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-date">06/07/2025</span>
+            <h3>كأس العرش النسخة الثالثة فئة الفتيان</h3>
+            <p style="color: var(--color-text-muted)">
+                الفوز بلقب كأس العرش لسنة تحت لواء الجامعةالملكية المغربية الايكيدو الرتبة الثانية
+            </p>
+            <button class="watch-video-btn">▶ مشاهدة الفيديو</button>
+          </div>
+        </article>
+
+        <!-- Item 9 - 06/07/2025 -->
+        <article class="achievement-card" data-video-id="Fo5b1MCKZTU">
+          <div class="achievement-img">
+            <img
+              src="../static/images/achievements/06072025-smaller.png"
+              alt="بطولة عصبة الأيكيدو سلا"
+            />
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-date">06/07/2025</span>
+            <h3>كأس العرش النسخة الثالثة فئة الكتاكيت</h3>
+            <p style="color: var(--color-text-muted)">
+                الفوز بلقب كأس العرش لسنة تحت لواء الجامعةالملكية المغربية الايكيدو الرتبة الأولى
+            </p>
+            <button class="watch-video-btn">▶ مشاهدة الفيديو</button>
+          </div>
+        </article>
+
+        <!-- Item 8 - 16/02/2025 -->
+        <article class="achievement-card" data-video-id="WbcgPNuezHM">
+          <div class="achievement-img">
+            <img
+              src="../static/images/achievements/16022025.png"
+              alt="كأس جهة الرباط سلا القنيطرة للأيكيدو"
+            />
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-date">16/02/2025</span>
+            <h3>مشاركة جمعية الشهيد للفنون القتالية</h3>
+            <p style="color: var(--color-text-muted)">
+              مشاركة للجمعية في التدريب الجهوي بالدار
+              البيضاء
+            </p>
+            <button class="watch-video-btn">▶ مشاهدة الفيديو</button>
+          </div>
+        </article>
+
+        <!-- Item 7 - 02/06/2024 -->
+        <article class="achievement-card" data-video-id="r8WhUl_VPbQ">
+          <div class="achievement-img">
+            <img
+              src="../static/images/achievements/02062024.png"
+              alt="بطولة المغرب للأيكيدو 2022"
+            />
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-date">02/06/2024</span>
+            <h3>مشاركة الجمعية الشهيد الرياضة الايكيدو في بطولة كأس العرش</h3>
+            <p style="color: var(--color-text-muted)">
+              مشاركة الجمعية الشهيد الرياضة الايكيدو في بطولة كأس العرش
+              والحصول على المرتبة الاولى
+            </p>
+            <button class="watch-video-btn">▶ مشاهدة الفيديو</button>
+          </div>
+        </article>
+
+        <!-- Item 6 - 03/03/2024 -->
+        <article class="achievement-card" data-video-id="pWCh3MhMvvs">
+          <div class="achievement-img">
+            <img
+              src="../static/images/achievements/03032024.png"
+              alt="مشاركة في بطولة الايكيدو في نسختها الثانية"
+            />
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-date">03/03/2024</span>
+            <h3>مشاركة في بطولة الايكيدو في نسختها الثانية</h3>
+            <p style="color: var(--color-text-muted)">
+              مشاركة الجمعية الشهيد لرياضة الايكيدو في بطولة الايكيدو في نسختها
+              الثانية
+            </p>
+            <button class="watch-video-btn">▶ مشاهدة الفيديو</button>
+          </div>
+        </article>
+
+        <!-- Item 5 - 16/07/2023 -->
+        <article class="achievement-card" data-video-id="B50z3EkaQ_0">
+          <div class="achievement-img">
+            <img
+              src="../static/images/achievements/16-07-2023.jpg"
+              alt="المشاركة في كأس العرش"
+            />
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-date">16/07/2023</span>
+            <h3>
+              الحصول على المرتبة الثالثة في كأس العرش منظم من طرف الجامعة
+              الملكية المغربية للايكيدو
+            </h3>
+            <p style="color: var(--color-text-muted)">
+              المشاركة في كأس العرش منظم من طرف الجامعة الملكية المغربية
+              للايكيدو
+            </p>
+            <button class="watch-video-btn">▶ مشاهدة الفيديو</button>
+          </div>
+        </article>
+
+        <!-- Item 4 - 21/06/2023 -->
+        <article class="achievement-card" data-video-id="BjXTUD00V1g">
+          <div class="achievement-img">
+            <img
+              src="../static/images/achievements/21-06-2023.png"
+              alt="عرض بسينيما هوليود بسلا"
+            />
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-date">21/06/2023</span>
+            <h3>عرض بسينيما هوليود بسلا</h3>
+            <p style="color: var(--color-text-muted)">
+              عرض للايكيدو بسينيما هوليود بسلا
+            </p>
+            <button class="watch-video-btn">▶ مشاهدة الفيديو</button>
+          </div>
+        </article>
+
+        <!-- Item 3 - 30/04/2023 -->
+        <article class="achievement-card" data-video-id="PDZHGBxLGXU">
+          <div class="achievement-img">
+            <img
+              src="../static/images/achievements/2023-04-30.png"
+              alt="مشاركة في البطولة الوطنية"
+            />
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-date">30/04/2023</span>
+            <h3>الحصول على المرتبة الثانية في البطولة الوطنية لاليكيدو</h3>
+            <p style="color: var(--color-text-muted)">
+              مشاركة في البطولة الوطنية لاليكيدو والكيندو والجودو واليايدو التي
+              نظمتها الجامعة الملكية المغربية التي حصلت على الرتبة الثانية فتيان
+            </p>
+            <button class="watch-video-btn">▶ مشاهدة الفيديو</button>
+          </div>
+        </article>
+
+        <!-- Item 2 - Demonstration 2016 -->
+        <article class="achievement-card" data-video-id="iM2au5cDg6E">
+          <div class="achievement-img">
+            <img
+              src="../static/images/achievements/2016.png"
+              alt="تدريب بالقاعة المغطاة"
+            />
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-date">استعراض رياضي للجمعية</span>
+            <h3>
+              تدريب بالقاعة المغطاة بالمركب الرياضي الامير مولاي عبدالله 2016
+            </h3>
+            <p style="color: var(--color-text-muted)">
+              تدريب بالقاعة المغطاة بالمركب الرياضي الامير مولاي عبدالله 2016
+              جمعية الشهيد للايكيدو بحضور الاستاذ مصطفى شوكت الدرجة السادسة
+              أيكيدو
+            </p>
+            <button class="watch-video-btn">▶ مشاهدة الفيديو</button>
+          </div>
+        </article>
+
+        <!-- Item 1 - 27-03-2016 -->
+        <article class="achievement-card" data-video-id="yMf4RBnT4g4">
+          <div class="achievement-img">
+            <img
+              src="../static/images/achievements/27032016.png"
+              alt="استعراض للجمعية"
+            />
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-date">27/03/2016</span>
+            <h3>استعراض للجمعية</h3>
+            <p style="color: var(--color-text-muted)">
+              Association ACHAHID Aikido a Sale le 27-03-2016
+            </p>
+            <button class="watch-video-btn">▶ مشاهدة الفيديو</button>
+          </div>
+        </article>
+      </div>
     </section>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+      <div class="video-modal-content">
+        <span class="video-modal-close">&times;</span>
+        <div class="video-wrapper">
+          <iframe
+            id="youtubePlayer"
+            src=""
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+            "
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer id="contact">
-        <div class="container">
-            <div class="footer-content" style="display: flex; flex-wrap: wrap; justify-content: space-between; text-align: right;">
-                <div style="flex: 1; min-width: 250px; margin-bottom: 2rem;">
-                    <h4 style="color: var(--color-primary);">جمعية الشهيد</h4>
-                    <p style="color: var(--color-text-muted);">العنوان: سلا الجديدة، المغرب</p>
-                    <p style="color: var(--color-text-muted);">الهاتف: 669 563 636 212 00</p>
-                    <p style="color: var(--color-text-muted);">البريد: Association.chahid@gmail.com</p>
-                </div>
-                <div style="flex: 1; min-width: 250px;">
-                    <h4>روابط سريعة</h4>
-                    <ul style="color: var(--color-text-muted);">
-                        <li><a href="#about">عن الجمعية</a></li>
-                        <li><a href="pages/achievements.html">الإنجازات</a></li>
-                        <li><a href="https://wa.me/212636563669?text=السلام%20عليكم%20أرغب%20بالتسجيل%20لأخذ%20حصص%20رياضية%20بجمعيتكم.%20هل%20يمكن%20بعض%20المعلومات؟." target="_blank">التسجيل</a></li>
-                    
-                    </ul>
-                </div>
-                <div style="flex: 1; min-width: 250px;">
-                    <h4>اتصل بنا</h4>
-                    <ul style="color: var(--color-text-muted);">
-                        <li><a href="https://wa.me/212636563669">الواتساب</a></li>
-                        <li><a href="#">الانستغرام</a></li>
-                        <li><a href="https://www.facebook.com/share/17512sG6Qx/">الفيسبوك</a></li>
-                        <li><a href="https://youtube.com/@associationchahidaikidosal3587?si=xzpKcpzkbqt0k1Fh">اليوتيوب</a></li>
-                        <li><a href="#">تيك توك</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                &copy; <script>document.write(new Date().getFullYear());</script> جمعية الشهيد للفنون القتالية. جميع الحقوق محفوظة.
-                <br>
-                تصميم: <a href="https://eaf-microservice.netlify.app" target="_blank"><span style="color: var(--color-primary);">EAF microservice</span></a>
-            </div>
+      <div class="container">
+        <div
+          class="footer-content"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            text-align: right;
+          "
+        >
+          <div style="flex: 1; min-width: 250px; margin-bottom: 2rem">
+            <h4 style="color: var(--color-primary)">جمعية الشهيد</h4>
+            <p style="color: var(--color-text-muted)">
+              العنوان: سلا الجديدة، المغرب
+            </p>
+            <p style="color: var(--color-text-muted)">
+              الهاتف: 669 563 636 212 00
+            </p>
+            <p style="color: var(--color-text-muted)">
+              البريد: Association.chahid@gmail.com
+            </p>
+          </div>
+          <div style="flex: 1; min-width: 250px">
+            <h4>روابط سريعة</h4>
+            <ul style="color: var(--color-text-muted)">
+              <li><a href="#about">عن الجمعية</a></li>
+              <li><a href="pages/achievements.html">الإنجازات</a></li>
+              <li>
+                <a
+                  href="https://wa.me/212636563669?text=السلام%20عليكم%20أرغب%20بالتسجيل%20لأخذ%20حصص%20رياضية%20بجمعيتكم.%20هل%20يمكن%20بعض%20المعلومات؟."
+                  target="_blank"
+                  >التسجيل</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div style="flex: 1; min-width: 250px">
+            <h4>اتصل بنا</h4>
+            <ul style="color: var(--color-text-muted)">
+              <li><a href="https://wa.me/212636563669">الواتساب</a></li>
+              <li><a href="#">الانستغرام</a></li>
+              <li>
+                <a href="https://www.facebook.com/share/17512sG6Qx/"
+                  >الفيسبوك</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://youtube.com/@associationchahidaikidosal3587?si=xzpKcpzkbqt0k1Fh"
+                  >اليوتيوب</a
+                >
+              </li>
+              <li><a href="#">تيك توك</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="copyright">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          جمعية الشهيد للفنون القتالية. جميع الحقوق محفوظة.
+          <br />
+          تصميم:
+          <a href="https://eaf-microservice.netlify.app" target="_blank"
+            ><span style="color: var(--color-primary)"
+              >EAF microservice</span
+            ></a
+          >
+        </div>
+      </div>
     </footer>
 
     <script src="../static/js/script.js"></script>
-</body>
+    <script src="../static/js/achievements.js"></script>
+  </body>
 </html>
