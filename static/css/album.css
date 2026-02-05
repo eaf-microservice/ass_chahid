@@ -1,0 +1,28 @@
+.album-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    background-color: var(--color-bg);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+}
+
+.album-scroll {
+    display: flex;
+    gap: 1rem;
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.album-scroll img {
+    height: 300px;
+    flex-shrink: 0;
+}
