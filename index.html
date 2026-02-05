@@ -82,8 +82,9 @@
         <div class="container">
             <h2 style="text-align: center; margin-bottom: 3rem;">معرض الصور</h2>
             <p style="text-align: center; color: var(--color-text-muted); margin-bottom: 2rem;">اكتشف لحظات من تدريباتنا وفعالياتنا من خلال معرض الصور الخاص بنا.</p>
-            <div class="album-container">
-                <div class="album-scroll">
+            <div class="album-container" id="album-container">
+                <button class="album-nav-btn" id="prev-btn">&#10094;</button>
+                <div class="album-scroll" id="album-scroll">
                     <img src="static/images/albums/img2026-02-03.jpeg" alt="معرض 1" loading="lazy">
                     <img src="static/images/albums/Image 2026-02-05 at 17.50.34 (1).jpeg" alt="معرض 2" loading="lazy">
                     <img src="static/images/albums/Image 2026-02-05 at 17.50.34 (2).jpeg" alt="معرض 3" loading="lazy">
@@ -93,6 +94,7 @@
                     <img src="static/images/albums/Image 2026-02-05 at 17.50.34.jpeg" alt="معرض 7" loading="lazy">
                     <img src="static/images/albums/Image 2026-02-05 at 17.50.35.jpeg" alt="معرض 8" loading="lazy">
                 </div>
+                <button class="album-nav-btn" id="next-btn">&#10095;</button>
             </div>
         </div>
     </section>
@@ -163,5 +165,6 @@
     </footer>
 
     <script src="static/js/script.js"></script>
+    <script src="static/js/album.js"></script>
 </body>
 </html>

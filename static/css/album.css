@@ -1,28 +1,51 @@
 .album-container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
     background-color: var(--color-bg);
     padding: 1rem;
     border-radius: var(--radius-md);
+    position: relative;
 }
 
 .album-scroll {
     display: flex;
     gap: 1rem;
-    animation: scroll 30s linear infinite;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .album-scroll img {
     height: 300px;
     flex-shrink: 0;
+}
+
+.album-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#prev-btn {
+    left: 1rem;
+}
+
+#next-btn {
+    right: 1rem;
+}
+
+.album-nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
